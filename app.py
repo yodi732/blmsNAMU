@@ -980,3 +980,11 @@ if __name__ == "__main__":
         config.bind = [server_set['host'] + ":" + server_set['port']]
 
         asyncio.run(serve(app, config))
+        
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return 'Hello from Render!'
